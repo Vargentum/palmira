@@ -19,6 +19,7 @@
 
 //SPRITING
 @import "sprites/share/*.png";
+@import "sprites/services/*.png";
 
 *,*:before,*:after,input[type=search]{@include box-sizing(border-box);}//border-box-sizing for all elems
 
@@ -362,7 +363,6 @@ a{
   margin:10px 0;
   p{margin-bottom: $paragraphSpace;}
   ul{
-    list-style-type: disc;
     margin-bottom:$paragraphSpace;
     //li{
     //  position: relative;
@@ -421,7 +421,9 @@ DEVELOPER STYLES RUN BELOW THIS POINT
   @extend .gradient-attention;
   &:hover,&:focus,&.active{@extend .gradient-attention-hover;}
 }
-
+.section-with-title{
+  .title{font-size: 18px; margin-bottom: 10px;}
+}
 /*LAYOUT---------------------------------*/
 body {
   height: 100%;
@@ -844,10 +846,142 @@ body {
   }
 }
 
+/*GALLERY page------------------------*/
+.b-gallery{
+  .title{
+    font-size: 20px;
+    margin:0px 0 10px;
+  }
+  .content{
+    @extend .jLine-top;
+  }
+  .unit{
+    display: block;
+    margin-bottom: 25px;
+    width:205px;
+    img{width:205px;}
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
+.b-pagination{
+  margin:25px 0;
+  @extend .jLine;
+  .list{
+    @extend .hLine;
+    width:300px;
+  }
+  .unit{
+    font-size: 18px;
+    margin:0 3px;
+    text-decoration: underline;
+    &:hover,&:focus{text-decoration: none;}
+  }
+  .unit--control{
+    text-decoration: none;
+    margin:0 5px;
+  }
+  .unit--control--prev{
+    @extend .unit--control;
+    &:first-child:before{content: '←'; margin-right: 2px;}
+  }
+  .unit--control--next{
+    @extend .unit--control;
+    &:last-child:after{content: '→'; margin-left: 2px;}
+  }
+}
 
-/*SOME page------------------------*/
-/*SOME page------------------------*/
-
+/*ABOUT page------------------------*/
+.b-services{
+  @extend .section-with-title;
+  margin:25px 0;
+  .content{
+    @extend .jLine-top;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .unit{
+    position: relative;
+    width: 210px;
+    height: 90px;
+    padding-left: 90px;
+    line-height: 1.25;
+    &:before{
+      @extend .pseudo-block;
+      left:0;
+      top:50%;
+    }
+    span{
+      height: inherit;
+      width:100%;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  @for $i from 1 through 7{
+    .unit-#{$i}{
+      @extend .unit;
+      &:before{@include services-sprite(service-#{$i});}
+    }
+  }
+  .unit-1:before{
+    width: 68px;
+    height: 74px;
+    margin-top: -38px;
+    left: 12px;
+  }
+  .unit-2:before{
+    width: 84px;
+    height: 84px;
+    margin-top: -42px;
+    left: 3px;
+  }
+  .unit-3:before{
+    width: 61px;
+    height: 81px;
+    margin-top: -40px;
+    left: 14px;
+  }
+  .unit-4:before{
+    width: 86px;
+    height: 80px;
+    margin-top: -40px;
+  }
+  .unit-5:before{
+    width: 83px;
+    height: 75px;
+    margin-top: -38px;
+  }
+  .unit-6:before{
+    width: 72px;
+    height: 70px;
+    margin-top: -35px;
+    left: 10px;
+  }
+  .unit-7:before{
+    width: 86px;
+    height: 81px;
+    margin-top: -40px;
+  }
+  .unit-8{
+    @extend .unit;
+    padding-left: 0;
+    font-weight: normal;
+    span{
+      width:210px;
+      text-align: center;
+    }
+  }
+}
+.b-partners_list{
+  li{margin:10px 0;}
+}
+.b-authograph{
+  margin:15px 0;
+  font-size: 12px;
+  font-weight: bold;
+  color:#000;
+}
 /*PLUGINS styles -------------------*/
 
 //FF special

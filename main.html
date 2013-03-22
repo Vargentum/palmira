@@ -31,35 +31,35 @@
   <!--<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">-->
   <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">-->
 </head>
-<body itemscope itemtype='http://schema.org/WebPage'>
+<body itemscope itemtype='http://schema.org/http://schema.org/HomeAndConstructionBusiness'>
 <!--[if lt IE 9]><p class=chromeframe>Внимание! Вы используете <em>устаревший браузер!</em> Страница может загружаться долго, а часть элементов сайта выводится в упрощенном виде. Чтобы увидеть полноценную версию сайта - <a href="http://browsehappy.com/">установите новый современный браузер</a> - это увеличит скорость загрузки страниц в несколько раз, или <a href="http://www.google.com/chromeframe/?redirect=true">установите расширение Google Chrome Frame для Internet Explorer</a> - это позволит вам увеличить скорость загрузки страниц не покидая браузер.</p><![endif]-->
 
 <!-- WRAPPER -->
 <div class="b-stickyFooter_helper-1 pageWidth">
 
-  <!-- HEADER -->
-  <header class="b-header">
-    <!--logo-->
-    <a class="b-logo" href="index.html" itemprop='url'>
-      <img src="img/logo.jpg" alt="Пальмира - ремонтно-отделочные работы" itemprop='logo' itemscope itemtype='http://schema.org/ImageObject'>
-      <span class="name" itemprop="name">Пальмира</span>
-      <span class="name" itemprop="description">Ремонтно-отделочные работы</span>
-    </a>
-    <!--about-->
-    <div class="b-header__about">
-      <h2 class="title">ООО “Пальмира дом”</h2>
-      <p>8 лет на рынке ремонтно-отделочных работ. Более 200 успешно реализованных объектов</p>
+<!-- HEADER -->
+<header class="b-header">
+  <!--logo-->
+  <a class="b-logo" href="index.html" itemprop='url'>
+    <img src="img/logo.jpg" alt="Пальмира - ремонтно-отделочные работы" itemprop='logo' itemscope itemtype='http://schema.org/ImageObject'>
+    <span class="name" itemprop="name">Пальмира</span>
+    <span class="name" itemprop="description">Ремонтно-отделочные работы</span>
+  </a>
+  <!--about-->
+  <div class="b-header__about">
+    <h2 class="title" itemprop='legalName'>ООО “Пальмира дом”</h2>
+    <p>8 лет на рынке ремонтно-отделочных работ. Более 200 успешно реализованных объектов</p>
+  </div>
+  <div style="text-align: right;">
+    <!--phone-->
+    <div class="b-phone">
+      Пообщайтесь с нашим менеджером
+      <p class="attention" itemprop='telephone'>+7 (812) 600 38 30</p>
     </div>
-    <div style="text-align: right;">
-      <!--phone-->
-      <div class="b-phone">
-        Пообщайтесь с нашим менеджером
-        <p class="attention" itemprop='telephone'>+7 (812) 600 38 30</p>
-      </div>
-      <!--button-->
-      <a href="#" class="button-default b-callbackBtn">Заказать звонок</a>
-    </div>
-  </header><!--END HEADER-->
+    <!--button-->
+    <a href="#" class="button-default b-callbackBtn">Заказать звонок</a>
+  </div>
+</header><!--END HEADER-->
 
   <!--navigation-->
   <nav class="b-nav" itemscope itemtype='http://schema.org/SiteNavigationElement'>
@@ -101,9 +101,9 @@
       <!--catalog-->
       <nav class="b-catalog">
         <h2 class="title">Каталог услуг</h2>
-        <ul class="conent">
+        <ul class="content">
           <li>
-            <a class="label-1 active" href="#">Монтажные работы</a>
+            <a class="label-1" href="#">Монтажные работы</a>
             <ul>
               <li><a class="label-2" href="#">Работы со стенами</a></li>
               <li><a class="label-2" href="#">Работы со стенами</a></li>
@@ -208,25 +208,25 @@
       <div class="b-feedbacks">
         <h2 class="title">Отзывы клиентов</h2>
         <ul class="content">
-          <li class="unit">
+          <li class="unit" itemscope itemtype="http://schema.org/Review" itemprop='review'>
             <header class="unit__header">
-              <div class="unit__photo"><img src="img/tmp/feeback.jpg" alt=""></div>
+              <div class="unit__photo"><img src="img/tmp/feeback.jpg" alt="" itemprop='image'></div>
               <hgroup class="unit__header__content">
-                <h3 class="unit__title">Эдуард Бабаев </h3>
+                <h3 class="unit__title" itemprop='author' itemscope itemtype="http://schema.org/Person">Эдуард Бабаев </h3>
                 <h4 class="unit__type"><img src="img/feedback-type-1.jpg" alt="Вконтакте"></h4>
               </hgroup>
             </header>
-            <p role="main">Все работы выполнены в срок на высоком профессиональном уровне в в пределах сметной стоимости. Благодарю ребят за высококачественный ремонт, выполненный у меня в квартире.</p>
+            <p role="main" itemprop='reviewBody'>Все работы выполнены в срок на высоком профессиональном уровне в в пределах сметной стоимости. Благодарю ребят за высококачественный ремонт, выполненный у меня в квартире.</p>
           </li>
-          <li class="unit">
+          <li class="unit" itemscope itemtype="http://schema.org/Review" itemprop='review'>
             <header class="unit__header">
-              <div class="unit__photo"><img src="img/tmp/feeback.jpg" alt=""></div>
+              <div class="unit__photo"><img src="img/tmp/feeback.jpg" alt="" itemprop='image'></div>
               <hgroup class="unit__header__content">
-                <h3 class="unit__title">Эдуард Бабаев </h3>
+                <h3 class="unit__title" itemprop='author' itemscope itemtype="http://schema.org/Person">Эдуард Бабаев </h3>
                 <h4 class="unit__type"><img src="img/feedback-type-1.jpg" alt="Вконтакте"></h4>
               </hgroup>
             </header>
-            <p role="main">Все работы выполнены в срок на высоком профессиональном уровне в в пределах сметной стоимости. Благодарю ребят за высококачественный ремонт, выполненный у меня в квартире.</p>
+            <p role="main" itemprop='reviewBody'>Все работы выполнены в срок на высоком профессиональном уровне в в пределах сметной стоимости. Благодарю ребят за высококачественный ремонт, выполненный у меня в квартире.</p>
           </li>
         </ul>
         <footer>
